@@ -65,10 +65,9 @@
   
   window.onload = function () {
     
-    generateContent();
-    
   }
   
+    
   
   var generateContent = function() {
     printarea.innerHTML = `
@@ -104,6 +103,9 @@
 
 
   printit.addEventListener("click", generateContent);
+  document.addEventListener("keydown", function(e) {
+    if (e.keyCode == 13) generateContent();
+  });
   
   </script>
 </body>
